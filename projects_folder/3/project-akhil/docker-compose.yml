@@ -1,0 +1,13 @@
+version: '3.8'
+
+
+services:
+  frontend-akhil:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "5174:5173"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    command: pnpm vite --host
